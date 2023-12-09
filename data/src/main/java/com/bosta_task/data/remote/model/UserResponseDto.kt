@@ -2,7 +2,7 @@ package com.bosta_task.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class UserResponse(
+data class UserResponseDto(
 
     @field:SerializedName("website")
     val website: String? = null,

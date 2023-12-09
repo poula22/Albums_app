@@ -2,7 +2,7 @@ package com.bosta_task.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class AlbumsResponseItem(
+data class AlbumsResponseItemDto(
 
 	@field:SerializedName("id")
 	val id: Int? = null,

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Album</string>
+    <string name="there_is_no_albums_to_show">there is no Albums to show</string>
+    <string name="my_albums">My Albums</string>
+    <string name="profile">Profile</string>
+    <string name="search_in_images">Search in images..</string>
+</resources>

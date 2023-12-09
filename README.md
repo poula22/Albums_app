@@ -4,7 +4,4 @@ to the second screen which is an album details screen. user request photos then 
 the image title.
 
 # App Video
-
-
 https://github.com/poula22/Albums_app/assets/86931053/aeacfa97-8b95-4d79-be6b-0a8a02a10b78
-

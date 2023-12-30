@@ -3,6 +3,7 @@ package com.bosta_task.data.remote
 import com.bosta_task.data.remote.webService.baseUrl.BaseUrl
 import com.bosta_task.domain.apiManager.ApiManager
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject

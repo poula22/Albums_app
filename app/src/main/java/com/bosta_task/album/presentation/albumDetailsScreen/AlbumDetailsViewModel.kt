@@ -41,13 +41,14 @@ class AlbumDetailsViewModel @Inject constructor(
                         if (it.exception is EmptyListException) _albumScreenState.emit(AlbumUiState.Error(it.exception))
                         else throw it.exception
                     }
+                    else -> {}
                 }
             }
         }
     }
 
     fun searchInPhotos(query:String){
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.Default) {
             _albumScreenState.update {
                 if (it is AlbumUiState.Success){
                     if (query.isBlank()){

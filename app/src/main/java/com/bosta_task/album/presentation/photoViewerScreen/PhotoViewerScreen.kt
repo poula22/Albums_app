@@ -1,4 +1,4 @@
-package com.bosta_task.album.presentation.PhotoViewerScreen
+package com.bosta_task.album.presentation.photoViewerScreen
 
 import android.content.Intent
 import androidx.compose.foundation.gestures.detectTransformGestures

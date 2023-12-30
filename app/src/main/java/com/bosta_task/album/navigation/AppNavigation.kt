@@ -1,4 +1,7 @@
 package com.bosta_task.album.navigation
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -9,7 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.bosta_task.album.presentation.PhotoViewerScreen.ImageViewerScreen
+import com.bosta_task.album.presentation.photoViewerScreen.ImageViewerScreen
 import com.bosta_task.album.presentation.albumDetailsScreen.AlbumDetailsScreen
 import com.bosta_task.album.presentation.albumDetailsScreen.AlbumDetailsViewModel
 import com.bosta_task.album.presentation.profileScreen.AlbumUiModel
@@ -21,6 +24,8 @@ fun AppNavigation() {
     NavHost(
         navController = navController,
         startDestination = Routes.PROFILE,
+        exitTransition = { fadeOut(animationSpec = tween(100)) },
+        enterTransition = { fadeIn(animationSpec = tween(300)) }
     ) {
         composable(route = Routes.PROFILE) {
             ProfileScreen(onAlbumClicked = { album ->
@@ -47,7 +52,7 @@ fun AppNavigation() {
             val albumId=backStackEntry.arguments?.getInt("albumId")!!
             val title=backStackEntry.arguments?.getString("albumTitle")!!
 
-            LaunchedEffect(key1 = Unit) {
+            LaunchedEffect(key1 = albumId) {
                 albumDetailsViewModel.fetchPhotos(albumId)
             }
 

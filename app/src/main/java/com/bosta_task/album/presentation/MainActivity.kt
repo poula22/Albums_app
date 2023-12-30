@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import coil.ImageLoader
 import com.bosta_task.album.navigation.AppNavigation
 import com.bosta_task.album.presentation.profileScreen.ProfileScreen
 import com.bosta_task.album.presentation.ui.theme.AlbumTheme
@@ -19,6 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             AlbumTheme {
                 // A surface container using the 'background' color from the theme
